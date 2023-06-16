@@ -10,8 +10,8 @@
 
 int main(void)
 {
-int a = 97;
-while (a <= 122)
+char a = 'a';
+while (a <= 'z')
 {
 putchar(a);
 a++;
