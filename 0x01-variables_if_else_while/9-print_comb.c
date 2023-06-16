@@ -14,15 +14,14 @@ int a = 0;
 
 while (a < 10)
 {
+putchar(a + 48);
 if (a == 9)
 {
-putchar(a + 48);
 putchar('$');
 a++;
 }
 else
 {
-putchar(a + 48);
 putchar(',');
 putchar(' ');
 a++;
