@@ -17,7 +17,6 @@ while (a < 10)
 putchar(a + 48);
 if (a == 9)
 {
-putchar('$');
 a++;
 }
 else
