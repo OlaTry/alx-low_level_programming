@@ -15,10 +15,10 @@ char c = 97;
 
 while (c <= 122)
 {
-putchar(c);
+_putchar(c);
 c++;
 }
-putchar('\n');
+_putchar('\n');
 
 return (0);
 }
