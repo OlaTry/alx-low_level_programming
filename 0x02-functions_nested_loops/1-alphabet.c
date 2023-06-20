@@ -2,11 +2,9 @@
 #include "main.h"
 
 /**
- * main - Entry point for the program
+ * print_alphabet - prints the lowercase alphabet followed by a new line
  *
  * Description : print the alphabet, in lowercase
- *
- *  Return: Always 0 (success)
 */
 
 void print_alphabet(void)
@@ -20,5 +18,4 @@ c++;
 }
 _putchar('\n');
 
-return (0);
 }
