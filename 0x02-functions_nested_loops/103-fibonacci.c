@@ -9,7 +9,7 @@
 
 int main(void)
 {
-float = total_sum;
+float total_sum;
 unsigned long  one = 0, two = 1, sum;
 while (1)
 {
