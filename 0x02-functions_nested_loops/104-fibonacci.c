@@ -39,7 +39,7 @@ unsigned long  onee = 0, twoo = 0, summ = 0;
 for (c = 1; c <= 98; c++)
 {
 	if (onee > 0)
-		printf("%lu\n", onee);
+		printf("%lu", onee);
 	i = numLength(mx) - 1 - numLength(one);
 	while (onee > 0 && i > 0)
 	{
