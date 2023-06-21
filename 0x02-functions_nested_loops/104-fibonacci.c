@@ -13,7 +13,7 @@ int numLength(int num)
 	if (!num)
 
 		return (1);
-	while (1)
+	while (num)
 	{
 		num = num / 10;
 		length += 1;
