@@ -17,7 +17,7 @@ sum = one + two;
 if (sum > 4000000)
 	break;
 if ((sum % 2) == 0)
-	total_sum += sum
+	total_sum += sum;
 one = two;
 two = sum;
 }
