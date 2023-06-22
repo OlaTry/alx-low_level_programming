@@ -4,6 +4,8 @@
  * print_diagonal -  a function that draws a diagonal line
  *
  * @n: take input
+ *
+ * Return: a diagonal
  */
 
 
