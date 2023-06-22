@@ -12,6 +12,7 @@ int p, s;
 
 if (n <= 0)
 	_putchar('\n');
+return;
 else
 {
 	for (p = 1; p <= n; p++)
