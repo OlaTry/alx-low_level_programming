@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -6,7 +5,7 @@
  *
  * @size: take input
  *
- * Return: 1 if it is an uppercase, 0 otherwithe
+ * Return: always 0 (success)
 */
 
 void print_square(int size)
