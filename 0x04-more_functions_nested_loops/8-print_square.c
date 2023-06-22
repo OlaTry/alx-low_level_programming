@@ -10,15 +10,15 @@
 
 void print_square(int size)
 {
-int r, c;
+	int row, column;
 
-for (r = 1; r <= size; r++)
-{
-for (c = 1; c <= size; c++)
-{
-_putchar('#');
-}
-_putchar('\n');
-}
+	for (row = 1; row <= size; row++)
+	{
+		for (column = 1; column <= size; column++)
+		{
+		_putchar('#');
+		}
+	_putchar('\n');
+	}
 }
 
