@@ -17,8 +17,8 @@ else
 	for (p = 0; p <= n; p++)
 	{
 		for (s = 0; s <= p; s++)
-			_putchar(32);
-		_putchar(92);
+			_putchar(' ');
+		_putchar('\\');
 		_putchar('\n');
 	}
 }
