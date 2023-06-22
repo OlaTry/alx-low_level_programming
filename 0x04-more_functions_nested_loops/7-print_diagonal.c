@@ -1,12 +1,9 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
  * print_diagonal -  function that draws a diagonal line
  *
  * @n: take input
- *
- * Return: 1 if it is an uppercase, 0 otherwithe
 */
 
 void print_diagonal(int n)
