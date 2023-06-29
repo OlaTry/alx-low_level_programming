@@ -23,12 +23,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	while (n2[j] != '\0')
 		j++;
 	if (i > j)
-		1 = i;
+		l = i;
 	else
-		1 = j;
+		l = j;
 	if (l + 1 > size_r)
 		return (0);
-	r[1] = '\0';
+	r[l] = '\0';
 	for (k = l - 1; k >= 0; k--)
 	{
 		i--;
