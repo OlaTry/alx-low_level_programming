@@ -7,7 +7,7 @@
  *
  * @src: take input two
  *
- * Return: new string
+ * Return: dest
  */
 
 char *_strncpy(char *dest, char *src, int n)
@@ -21,5 +21,6 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[i] = '\0';
 		i++;
 	}
+
 	return (dest);
 }
