@@ -7,7 +7,7 @@
  *
  * @accept: take input
  *
- * Return: pointer s
+ * Return: int
  */
 
 unsigned int _strspn(char *s, char *accept)
