@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * wildcmp - a function returns the value of x raised to the power of y
+ * m_p_s - a function returns the value of x raised to the power of y
  *
  * @s2: take input
  *
@@ -47,7 +47,7 @@ int inc(char *s1, char *s2)
  *
  * @s2: take input
  *
- * Return: int
+ * Return: success (0)
  */
 
 int wildcmp(char *s1, char *s2)
