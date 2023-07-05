@@ -8,6 +8,7 @@
  * Return: int
  */
 
+int s(int n, int v);
 int _sqrt_recursion(int n)
 {
 	return (s(n, 1));
