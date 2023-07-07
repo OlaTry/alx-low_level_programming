@@ -7,11 +7,10 @@
  *
  * @argv: list
  *
- * Return: 0
+ * Return: 0 or non zero
  */
-int main (int argc, char const *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
-        (void)argc;
-        printf("%s\n", argv[0]);
-        return 0;
+	printf("%d\n", argc - 1);
+	return (0);
 }
