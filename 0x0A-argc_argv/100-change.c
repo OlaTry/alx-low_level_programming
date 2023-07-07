@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 				}
 			}
 		}
-		printsf("%d\n", lc);
+		printf("%d\n", lc);
 	}
 	else
 	{
