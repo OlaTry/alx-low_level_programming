@@ -4,14 +4,16 @@
 /**
  * main - entry point prints coins
  *
- * @argc: int
+ * to make change for an amount of money
  *
- * @argv: list
+ * @argc: number
  *
- * Return: 0, non zero if fail
+ * @argv: pointer to an array
+ *
+ * Return: 0 success, non zero if fail
  */
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
 	if (argc == 2)
 	{
