@@ -20,7 +20,6 @@ int _strlen(char *s)
 }
 
 
-
 /**
  * *str_concat - a function that concates two strings
  *
