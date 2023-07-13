@@ -16,7 +16,7 @@ void _puts(char *str)
 
 	while (str[i])
 	{
-		_putchar(strp[i]);
+		_putchar(str[i]);
 		i++;
 	}
 }
@@ -36,7 +36,7 @@ int _atoi(const char *s)
 
 	unsigned long int resp = 0, firstNum, i;
 
-	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum)
+	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
 	{
 		if (s[firstNum] == '-')
 		{
