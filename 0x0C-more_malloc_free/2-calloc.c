@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * _mem - a function that fills memory
+ * _memset - a function that fills memory
  *
  * @s: pointer to put the constant
  *
@@ -15,7 +15,7 @@
  * Return: s
  */
 
-char *_mem(char *s, char b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	char *ptr = s;
 
@@ -46,7 +46,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (m == 0)
 		return (NULL);
-	_mem(m, 0, sizeof(int) * nmemb);
+	_memset(m, 0, sizeof(int) * nmemb);
 
 	return (m);
 }
