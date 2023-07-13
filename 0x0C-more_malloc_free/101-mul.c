@@ -1,100 +1,101 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
 
 /**
- * _puts - a function that prints a string
+ * _puts - a function that prints a string to stdout
  *
- * @str: take input
+ * @str: string to be printed
  */
-
 void _puts(char *str)
 {
-	int i = 0;
-
-	while (str[i])
-	{
-		_putchar(str[i]);
-		i++;
-	}
+        while (*str)
+        {
+                putchar(*str++);
+        }
 }
 
-
 /**
- * _atoi - a function that converts the string to integar
+ * _isdigit - a function that checks for a digit (0 through 9)
  *
- * @s: take input
+ * @c: integer to be checked
  *
- * Return: integar
+ * Return: 1 if c is a digit, 0 otherwise
  */
-
-int _atoi(const char *s)
+int _isdigit(int c)
 {
-	int sign = 1;
-
-	unsigned long int resp = 0, firstNum, i;
-
-	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
-	{
-		if (s[firstNum] == '-')
-		{
-			sign *= -1;
-		}
-	}
-
-	for (i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
-	{
-		resp *= 10;
-		resp += (s[i] - 48);
-	}
-	return (sign * resp);
+        return (c >= '0' && c <= '9');
 }
 
-
 /**
- * print_int - a function that prints an integar
+ * _atoi - a function that converts a string to an integer
  *
- * @n: take input int
+ * @s: string to be converted
+ *
+ * Return: integer value of converted string
  */
-
-void print_int(unsigned long int n)
+int _atoi(char *s)
 {
-	unsigned long int divisor = 1, i, resp;
+        int result = 0;
+        int sign = 1;
 
-	for (i = 0; n / divisor > 9; i++, divisor *= 10)
-	;
+        if (*s == '-')
+        {
+                sign = -1;
+                s++;
+        }
 
-	for (; divisor >= 1; n %= divisor, divisor /= 10)
-	{
-		resp = n / divisor;
-		_putchar('0' + resp);
-	}
+        while (_isdigit(*s))
+        {
+                result = result * 10 + (*s - '0');
+                s++;
+        }
+
+        return result * sign;
 }
 
+/**
+ * print_int - a function that prints an integer to stdout
+ *
+ * @n: integer to be printed
+ */
+void print_int(int n)
+{
+        if (n < 0)
+        {
+                putchar('-');
+                n = -n;
+        }
+
+        if (n / 10)
+        {
+                print_int(n / 10);
+        }
+
+        putchar(n % 10 + '0');
+}
 
 /**
- * main - a function that print result
+ * main - a function that multiplies two positive numbers
  *
- * @argc: take int
+ * @argc: number of command-line arguments
  *
- * @argv: take list
+ * @argv: array of command-line arguments
  *
- * Return: 0
+ * Return: 0 on success, 98 on failure
  */
-
 int main(int argc, char const *argv[])
 {
-	(void)argc;
+        if (argc != 3 || !_isdigit(*argv[1]) || !_isdigit(*argv[2]))
+        {
+                _puts("Error\n");
+                return (98);
+        }
 
-	if (argc != 3)
-	{
-		_puts("Error ");
-		exit(98);
-	}
-	print_int(_atoi(argv[1]) * _atoi(argv[2]));
-	_putchar('\n');
+        int num1 = _atoi(argv[1]);
+        int num2 = _atoi(argv[2]);
 
-	return (0);
+        print_int(num1 * num2);
+        putchar('\n');
+
+        return (0);
 }
