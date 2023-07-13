@@ -1,68 +1,97 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+
+/**
+ * _puts - a function that prints a string
+ *
+ * @str: take input
+ */
 
 void _puts(char *str)
 {
-while (*str)
+int i = 0;
+
+while (str[i])
 {
-putchar(*str++);
+_putchar(str[i]);
+i++;
 }
 }
 
-int _isdigit(int c)
-{
-return (c >= '0' && c <= '9');
-}
+/**
+ * _atoi - a function that converts the string to integar
+ *
+ * @s: take input
+ *
+ * Return: integar
+ */
 
-int _atoi(char *s)
+int _atoi(const char *s)
 {
-int result = 0;
 int sign = 1;
+unsigned long int resp = 0, firstNum, i;
 
-if (*s == '-')
+for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
 {
-sign = -1;
-s++;
-}
-
-while (_isdigit(*s))
+if (s[firstNum] == '-')
 {
-result = result * 10 + (*s - '0');
-s++;
+sign *= -1;
+}
 }
 
-return result * sign;
-}
-
-void print_int(int n)
+for (i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
 {
-if (n < 0)
-{
-putchar('-');
-n = -n;
+resp *= 10;
+resp += (s[i] - 48);
+}
+return (sign *resp);
 }
 
-if (n / 10)
+
+/**
+ * print_int - a function that prints an integar
+ *
+ * @n: take input int
+ */
+
+void print_int(unsigned long int n)
 {
-print_int(n / 10);
+unsigned long int divisor = 1, i, resp;
+
+for (i = 0; n / divisor > 9; i++, divisor *= 10)
+;
+
+for (; divisor >= 1; n %= divisor, divisor /= 10)
+{
+resp = n / divisor;
+_putchar('0' + resp);
+}
 }
 
-putchar(n % 10 + '0');
-}
+/**
+ * main - a function that print result
+ *
+ * @argc: take int
+ *
+ * @argv: take list
+ *
+ * Return: 0
+ */
 
 int main(int argc, char const *argv[])
 {
-if (argc != 3 || !_isdigit(*argv[1]) || !_isdigit(*argv[2]))
+(void)argc;
+
+if (argc != 3)
 {
-_puts("Error\n");
-return (98);
+_puts("Error ");
+exit(98);
 }
-
-int num1 = _atoi(argv[1]);
-int num2 = _atoi(argv[2]);
-
-print_int(num1*num2);
-putchar('\n');
+print_int(_atoi(argv[1]) * _atoi(argv[2]));
+_putchar('\n');
 
 return (0);
 }
