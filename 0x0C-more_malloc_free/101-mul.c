@@ -1,8 +1,6 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
+#include <stdio.h>
+#include "main.h"
 
 /**
  * _puts - a function that prints a string
@@ -48,7 +46,7 @@ for (i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
 resp *= 10;
 resp += (s[i] - 48);
 }
-return (sign * resp);
+return (sign *resp);
 }
 
 
