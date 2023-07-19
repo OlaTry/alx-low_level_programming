@@ -7,8 +7,9 @@
 /**
  * struct op - struct op
  *
- * @op: operator
  * @f: function
+ * @p: pointer
+ * Description: This struct contains a math operation and a function associated
  */
 
 typedef struct op
@@ -22,7 +23,6 @@ int op_sub(int a, int b);
 int op_mul(int a, int b);
 int op_div(int a, int b);
 int op_mod(int a, int b);
-
 int (*get_op_func(char *s))(int, int);
 
-#endif
+#endif /* CALC_H */
