@@ -7,6 +7,7 @@
 
 /**
  * struct token - struct token
+ *
  * @token: format token
  * @f: the function associated
  */
