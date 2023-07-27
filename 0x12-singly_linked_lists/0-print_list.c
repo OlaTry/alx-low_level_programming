@@ -6,7 +6,6 @@
  *
  * Return: length of integar
  */
-
 int _strlen(char *s)
 {
 	int i = 0;
